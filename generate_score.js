@@ -8,27 +8,27 @@ function calculateScore(response) {
     let score = 0;
 
     // enjoy their job
-    if (response.enjoys_job && response.enjoys_job !== 'unsure') {
+    if (response.enjoys_job && response.enjoys_job.toLowerCase() !== 'unsure') {
         totalQuestions++;
-        if (response.enjoys_job === 'yes') {
+        if (response.enjoys_job.toLowerCase() === 'yes') {
             score++;
         };
     }
     console.log("enjoys_job",score, totalQuestions);
 
     // respected by managers
-    if (response.respected_by_managers && response.respected_by_managers !== 'unsure') {
+    if (response.respected_by_managers && response.respected_by_managers.toLowerCase() !== 'unsure') {
         totalQuestions++;
-        if (response.respected_by_managers === 'yes') {
+        if (response.respected_by_managers.toLowerCase() === 'yes') {
             score++;
         };
     }
     console.log("respected_by_managers",score, totalQuestions);
 
     // good for carers
-    if (response.good_for_carers && response.good_for_carers !== 'unsure') {
+    if (response.good_for_carers && response.good_for_carers.toLowerCase() !== 'unsure') {
         totalQuestions++;
-        if (response.good_for_carers === 'yes') {
+        if (response.good_for_carers.toLowerCase() === 'yes') {
             score++;
         };
     }
@@ -44,9 +44,9 @@ function calculateScore(response) {
     console.log("more than 8", response.hours_actually_worked - response.contracted_hours,score, totalQuestions);
 
     //unpaid extra work
-    if (response.unpaid_extra_work && response.unpaid_extra_work !== 'unsure') {
+    if (response.unpaid_extra_work && response.unpaid_extra_work.toLowerCase() !== 'unsure') {
         totalQuestions++;
-        if (response.unpaid_extra_work === 'no'){
+        if (response.unpaid_extra_work.toLowerCase() === 'no'){
             score++;
             } 
     }
