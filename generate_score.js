@@ -14,7 +14,7 @@ function calculateScore(response) {
             score++;
         };
     }
-    console.log("enjoys_job",score, totalQuestions);
+    //console.log("enjoys_job",score, totalQuestions);
 
     // respected by managers
     if (response.respected_by_managers && response.respected_by_managers.toLowerCase() !== 'unsure') {
@@ -23,7 +23,7 @@ function calculateScore(response) {
             score++;
         };
     }
-    console.log("respected_by_managers",score, totalQuestions);
+    //console.log("respected_by_managers",score, totalQuestions);
 
     // good for carers
     if (response.good_for_carers && response.good_for_carers.toLowerCase() !== 'unsure') {
@@ -32,7 +32,7 @@ function calculateScore(response) {
             score++;
         };
     }
-    console.log("carers",score, totalQuestions);
+    //console.log("carers",score, totalQuestions);
 
     //  more than 8 hours
     if (response.contracted_hours !== undefined && response.hours_actually_worked !== undefined) {
@@ -41,7 +41,7 @@ function calculateScore(response) {
              score++;
             };
     }
-    console.log("more than 8", response.hours_actually_worked - response.contracted_hours,score, totalQuestions);
+    //console.log("more than 8", response.hours_actually_worked - response.contracted_hours,score, totalQuestions);
 
     //unpaid extra work
     if (response.unpaid_extra_work && response.unpaid_extra_work.toLowerCase() !== 'unsure') {
@@ -50,7 +50,7 @@ function calculateScore(response) {
             score++;
             } 
     }
-    console.log("unpaid",score, totalQuestions);
+    //console.log("unpaid",score, totalQuestions);
 
     //minimum wage
     if (response.hourly_rate) {
@@ -60,7 +60,7 @@ function calculateScore(response) {
             score++;
         }
     }
-    console.log("final ",score, totalQuestions);
+    //console.log("final ",score, totalQuestions);
     return { score, totalQuestions };
 }
 
