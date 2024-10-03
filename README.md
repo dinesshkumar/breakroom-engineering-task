@@ -2,7 +2,7 @@
 The minimum wage is not given so set at £10.00 by default. You can adjust this by modifying the MINIMUM_WAGE constant in the script if needed.
 
 ## Prerequisites
-Install latest version of NodeJS
+Install latest version of Node.js
 
 ## How to Run the Script
 1. Clone or download this repository to your local machine.
